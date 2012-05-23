@@ -1,5 +1,8 @@
 package br.edu.unoesc.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +20,7 @@ public class Usuario {
 	private String foto;
 	@ManyToOne	
 	private Cidade cidade;
-	private List <Interesse> Interesses = new ArrayList<Interesse>();
+	private List <Curso> cursos = new ArrayList<Curso>();
 	
 	public String getCodigo() {
 		return codigo;
@@ -55,10 +58,10 @@ public class Usuario {
 	public void setCidade(Cidade cidade) {
 		this.cidade = cidade;
 	}
-	public List<Interesse> getInteresses() {
-		return Interesses;
+	public List<Curso> getCursos() {
+		return cursos;
 	}
-	public void setInteresses(List<Interesse> interesses) {
-		Interesses = interesses;
+	public void setCursos(List<Curso> cursos) {
+		this.cursos = cursos;
 	}
 }
