@@ -6,8 +6,7 @@ import java.io.Serializable;
  *
  * @author agosti
  */
-public interface GenericModel 
-    extends Serializable { 
+public interface GenericModel extends Serializable { 
     
     Long getCodigo();
     
