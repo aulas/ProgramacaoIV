@@ -20,7 +20,7 @@ public class Usuario {
 	private String foto;
 	@ManyToOne	
 	private Cidade cidade;
-	private List <Curso> Interesses = new ArrayList<Curso>();
+	private List <Curso> cursos = new ArrayList<Curso>();
 	
 	public String getCodigo() {
 		return codigo;
@@ -58,10 +58,10 @@ public class Usuario {
 	public void setCidade(Cidade cidade) {
 		this.cidade = cidade;
 	}
-	public List<Curso> getInteresses() {
-		return Interesses;
+	public List<Curso> getCursos() {
+		return cursos;
 	}
-	public void setInteresses(List<Curso> interesses) {
-		Interesses = interesses;
+	public void setCursos(List<Curso> cursos) {
+		this.cursos = cursos;
 	}
 }
