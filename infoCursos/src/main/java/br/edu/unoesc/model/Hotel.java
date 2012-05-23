@@ -16,6 +16,8 @@ public class Hotel {
 	public int getCodigo() {
 		return codigo;
 	}
+	
+	//teste
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
