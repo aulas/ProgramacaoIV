@@ -17,7 +17,6 @@ public class Hotel {
 		return codigo;
 	}
 	
-	//teste
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
@@ -41,7 +40,7 @@ public class Hotel {
 	}
 	public Hotel() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	
