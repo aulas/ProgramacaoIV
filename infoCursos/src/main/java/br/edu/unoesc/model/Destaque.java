@@ -16,4 +16,5 @@ public class Destaque {
 	private Date termino;
 	private Periodo periodo;
 	private Curso curso;
+	private String teste;
 }
