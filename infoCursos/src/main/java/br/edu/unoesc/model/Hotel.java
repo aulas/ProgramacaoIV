@@ -7,16 +7,20 @@ import javax.persistence.Id;
 
 @Entity
 	
-public class Hotel {
+public class Hotel implements GenericModel {
+
+	private static final long serialVersionUID = -2133092251861668741L;
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int codigo;
+	private Long codigo;
 	private String nome;
 	private String link;
-	public int getCodigo() {
+	
+	public Long getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 	public String getNome() {
@@ -31,7 +35,7 @@ public class Hotel {
 	public void setLink(String link) {
 		this.link = link;
 	}
-	public Hotel(int codigo, String nome, String link) {
+	public Hotel(Long codigo, String nome, String link) {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
