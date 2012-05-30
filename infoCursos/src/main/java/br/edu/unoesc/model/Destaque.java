@@ -9,9 +9,14 @@ import javax.persistence.Id;
 
 @Entity
 public class Destaque implements GenericModel {
+<<<<<<< HEAD
 
 	private static final long serialVersionUID = -2133092251861668741L;
 	
+=======
+	
+	private static final long serialVersionUID = 1L;
+>>>>>>> 4f3a7f5eaeefe11fc2968c26d60a4878e67e0bb3
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long codigo;
