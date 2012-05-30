@@ -4,13 +4,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class Subcategoria {
+public class Categoria {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long codigo;
 	private String nome;
-	
 	public Long getCodigo() {
 		return codigo;
 	}
@@ -39,7 +38,7 @@ public class Subcategoria {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Subcategoria other = (Subcategoria) obj;
+		Categoria other = (Categoria) obj;
 		if (codigo == null) {
 			if (other.codigo != null)
 				return false;
