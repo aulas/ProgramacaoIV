@@ -1,3 +1,4 @@
+
 package br.edu.unoesc.model;
 
 import javax.persistence.Entity;

@@ -4,7 +4,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class Categoria {
+public class Categoria implements GenericModel {
+
+	private static final long serialVersionUID = -8059679672411186847L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
