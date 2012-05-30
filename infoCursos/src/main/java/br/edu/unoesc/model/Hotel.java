@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-	
+	//teste
 public class Hotel {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -16,6 +16,7 @@ public class Hotel {
 	public int getCodigo() {
 		return codigo;
 	}
+	
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
@@ -39,7 +40,7 @@ public class Hotel {
 	}
 	public Hotel() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	
