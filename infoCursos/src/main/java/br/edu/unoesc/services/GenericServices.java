@@ -20,6 +20,7 @@ public class GenericServices<T extends GenericModel> {
 	private Class<T> classe;
 
 	// padrão singleton
+	@SuppressWarnings("unchecked")
 	private Class<T> getClasse() {
 		if (this.classe == null) {
 			Type[] tipos = ((ParameterizedType) getClass()
@@ -81,6 +82,7 @@ public class GenericServices<T extends GenericModel> {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<T> listar() {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("PU");
 		EntityManager em = emf.createEntityManager();
