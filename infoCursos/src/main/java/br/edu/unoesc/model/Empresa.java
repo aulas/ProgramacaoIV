@@ -7,7 +7,10 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Empresa {
+public class Empresa implements GenericModel {
+
+	private static final long serialVersionUID = -2133092251861668741L;
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long codigo;
