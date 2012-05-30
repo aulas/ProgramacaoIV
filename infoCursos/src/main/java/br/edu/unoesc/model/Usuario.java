@@ -10,10 +10,13 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Usuario {
+public class Usuario implements GenericModel {
+
+	private static final long serialVersionUID = -2133092251861668741L;
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private String codigo;
+	private Long codigo;
 	private String nome;
 	private String email;
 	private String senha;
@@ -22,10 +25,10 @@ public class Usuario {
 	private Cidade cidade;
 	private List <Curso> cursos = new ArrayList<Curso>();
 	
-	public String getCodigo() {
+	public Long getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(String codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 	public String getNome() {

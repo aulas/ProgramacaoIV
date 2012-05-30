@@ -9,7 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Curso {
+public class Curso implements GenericModel {
+
+	private static final long serialVersionUID = -8059679672411186847L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long codigo;
@@ -30,6 +33,7 @@ public class Curso {
 	private Hotel hospedagem;
 	private List<Usuario> interessados;
 	private List<Destaque> destaques;
+
 	@Override
 	public String toString() {
 		return "Curso [codigo=" + codigo + ", titulo=" + titulo

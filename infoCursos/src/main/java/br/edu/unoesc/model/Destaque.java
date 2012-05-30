@@ -18,6 +18,7 @@ public class Destaque {
 				+ ", termino=" + termino + ", periodo=" + periodo + ", curso="
 				+ curso + ", teste=" + teste + "]";
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
