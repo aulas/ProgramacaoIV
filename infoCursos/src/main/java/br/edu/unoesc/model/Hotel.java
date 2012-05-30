@@ -6,15 +6,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-	
-public class Hotel implements GenericModel {
 
-	private static final long serialVersionUID = -2133092251861668741L;
+public class Hotel implements GenericModel  {
+	
+	private static final long serialVersionUID = -8059679672411186847L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long codigo;
 	private String nome;
+	
 	private String link;
 	
 	public Long getCodigo() {
@@ -35,7 +36,7 @@ public class Hotel implements GenericModel {
 	public void setLink(String link) {
 		this.link = link;
 	}
-	public Hotel(Long codigo, String nome, String link) {
+	public Hotel(long codigo, String nome, String link) {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
@@ -43,7 +44,7 @@ public class Hotel implements GenericModel {
 	}
 	public Hotel() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	
