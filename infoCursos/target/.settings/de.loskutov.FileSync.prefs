@@ -1,0 +1,12 @@
+WARNING=DO NOT MODIFY THIS FILE IF YOU DON'T UNDERSTAND
+defaultDestination=@target
+defaultVariables=
+eclipse.preferences.version=1
+includeTeamPrivateFiles=false
+map|0=/|,|,|src/;src/main/;src/main/java/;src/main/resources/;src/main/webapp/|,
+map|1=src|,|,|main/;main/java/;main/resources/;main/webapp/|,
+map|2=src/main|,|,|java/;resources/;webapp/|,
+map|3=src/main/java|,|,|,|,
+map|4=src/main/resources|,|,|,|,
+map|5=src/main/webapp|,|,|,|,
+useCurrentDateForDestinationFiles=false

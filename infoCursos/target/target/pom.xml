@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.edu.unoesc</groupId>
+  <artifactId>infoCursos</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1</version>
+  <name>infoCursos Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+  	<junit-version>4.8</junit-version>
+  	<hibernate-version>3.5.6-Final</hibernate-version>
+  	<hibernate-jpa-version>1.0.0.Final</hibernate-jpa-version>
+  	<hibernate-validator>4.2.0.Final</hibernate-validator>
+  	<mysql-version>5.1.10</mysql-version>
+  	<jsf-version>2.1.7</jsf-version>
+  	<prime-face>3.2</prime-face>
+  </properties>
+
+
+  <dependencies>
+
+	<!-- JUnit -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit-version}</version>
+      <scope>test</scope>
+    </dependency>
+
+
+	<!-- Hibernate -->
+  	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-annotations</artifactId>
+		<version>${hibernate-version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>${hibernate-version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>${hibernate-version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.hibernate.javax.persistence</groupId>
+		<artifactId>hibernate-jpa-2.0-api</artifactId>
+		<version>${hibernate-jpa-version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-validator</artifactId>
+		<version>${hibernate-validator}</version>
+	</dependency>
+
+
+	<!-- JDBC -->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>${mysql-version}</version>
+		<scope>provided</scope>
+	</dependency>
+
+	<!-- JSF 2.0 -->
+	<dependency>
+		<groupId>org.glassfish</groupId>
+		<artifactId>javax.faces</artifactId>
+		<version>${jsf-version}</version>
+	</dependency>
+
+	<!-- Primefaces -->
+	<dependency>  
+	    <groupId>org.primefaces</groupId>  
+	    <artifactId>primefaces</artifactId>  
+	    <version>3.2</version>  
+	</dependency>  
+
+  </dependencies>
+
+
+  <!-- Repositórios de Arquivos -->
+  <repositories>
+	  <repository>  
+		    <id>prime-repo</id>  
+		    <name>PrimeFaces Maven Repository</name>  
+		    <url>http://repository.primefaces.org</url>  
+		    <layout>default</layout>  
+	  </repository> 
+  </repositories>  
+  
+  <build>
+    <finalName>infoCursos</finalName>
+  </build>
+  
+</project>
