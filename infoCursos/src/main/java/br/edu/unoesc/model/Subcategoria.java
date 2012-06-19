@@ -1,9 +1,11 @@
 package br.edu.unoesc.model;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Subcategoria implements GenericModel {
 
 	private static final long serialVersionUID = -8059679672411186847L;
