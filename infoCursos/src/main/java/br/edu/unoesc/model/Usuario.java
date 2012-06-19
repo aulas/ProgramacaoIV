@@ -1,6 +1,7 @@
 package br.edu.unoesc.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -8,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Usuario implements GenericModel {
@@ -21,6 +24,9 @@ public class Usuario implements GenericModel {
 	private String email;
 	private String senha;
 	private String foto;
+	private Short escolaridade;
+	@Temporal(TemporalType.DATE)
+	private Date dataNascimento;
 	@ManyToOne	
 	private Cidade cidade;
 	private List <Curso> cursos = new ArrayList<Curso>();
@@ -66,6 +72,18 @@ public class Usuario implements GenericModel {
 	}
 	public void setCursos(List<Curso> cursos) {
 		this.cursos = cursos;
+	}
+	public Short getEscolaridade() {
+		return escolaridade;
+	}
+	public void setEscolaridade(Short escolaridade) {
+		this.escolaridade = escolaridade;
+	}
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 	@Override
 	public String toString() {
