@@ -1,5 +1,6 @@
 package br.edu.unoesc.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -7,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Curso implements GenericModel {
@@ -31,8 +33,12 @@ public class Curso implements GenericModel {
 	private Empresa anunciante;
 	private Subcategoria subcategoria;
 	private Hotel hospedagem;
-	private List<Usuario> interessados;
-	private List<Destaque> destaques;
+	
+	@OneToMany
+	private List<Usuario> interessados = new ArrayList<Usuario>();
+	
+	@OneToMany
+	private List<Destaque> destaques = new ArrayList<Destaque>();;
 
 	@Override
 	public String toString() {
@@ -158,34 +164,9 @@ public class Curso implements GenericModel {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result
-				+ ((anunciante == null) ? 0 : anunciante.hashCode());
-		result = prime * result + ((cidade == null) ? 0 : cidade.hashCode());
-		result = prime * result
-				+ ((clicaramLink == null) ? 0 : clicaramLink.hashCode());
 		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
 		result = prime * result
-				+ ((curtiram == null) ? 0 : curtiram.hashCode());
-		result = prime * result
 				+ ((descricao == null) ? 0 : descricao.hashCode());
-		result = prime * result
-				+ ((destaques == null) ? 0 : destaques.hashCode());
-		result = prime * result
-				+ ((detalhes == null) ? 0 : detalhes.hashCode());
-		result = prime * result
-				+ ((endereco == null) ? 0 : endereco.hashCode());
-		result = prime * result + ((folder == null) ? 0 : folder.hashCode());
-		result = prime * result + ((inicio == null) ? 0 : inicio.hashCode());
-		result = prime * result
-				+ ((interessados == null) ? 0 : interessados.hashCode());
-		result = prime * result
-				+ ((linkInscricao == null) ? 0 : linkInscricao.hashCode());
-		result = prime * result
-				+ ((subcategoria == null) ? 0 : subcategoria.hashCode());
-		result = prime * result + ((termino == null) ? 0 : termino.hashCode());
-		result = prime * result + ((titulo == null) ? 0 : titulo.hashCode());
-		result = prime * result
-				+ ((visualizaram == null) ? 0 : visualizaram.hashCode());
 		return result;
 	}
 	@Override
@@ -197,93 +178,19 @@ public class Curso implements GenericModel {
 		if (getClass() != obj.getClass())
 			return false;
 		Curso other = (Curso) obj;
-		if (anunciante == null) {
-			if (other.anunciante != null)
-				return false;
-		} else if (!anunciante.equals(other.anunciante))
-			return false;
-		if (cidade == null) {
-			if (other.cidade != null)
-				return false;
-		} else if (!cidade.equals(other.cidade))
-			return false;
-		if (clicaramLink == null) {
-			if (other.clicaramLink != null)
-				return false;
-		} else if (!clicaramLink.equals(other.clicaramLink))
-			return false;
 		if (codigo == null) {
 			if (other.codigo != null)
 				return false;
 		} else if (!codigo.equals(other.codigo))
-			return false;
-		if (curtiram == null) {
-			if (other.curtiram != null)
-				return false;
-		} else if (!curtiram.equals(other.curtiram))
 			return false;
 		if (descricao == null) {
 			if (other.descricao != null)
 				return false;
 		} else if (!descricao.equals(other.descricao))
 			return false;
-		if (destaques == null) {
-			if (other.destaques != null)
-				return false;
-		} else if (!destaques.equals(other.destaques))
-			return false;
-		if (detalhes == null) {
-			if (other.detalhes != null)
-				return false;
-		} else if (!detalhes.equals(other.detalhes))
-			return false;
-		if (endereco == null) {
-			if (other.endereco != null)
-				return false;
-		} else if (!endereco.equals(other.endereco))
-			return false;
-		if (folder == null) {
-			if (other.folder != null)
-				return false;
-		} else if (!folder.equals(other.folder))
-			return false;
-		if (inicio == null) {
-			if (other.inicio != null)
-				return false;
-		} else if (!inicio.equals(other.inicio))
-			return false;
-		if (interessados == null) {
-			if (other.interessados != null)
-				return false;
-		} else if (!interessados.equals(other.interessados))
-			return false;
-		if (linkInscricao == null) {
-			if (other.linkInscricao != null)
-				return false;
-		} else if (!linkInscricao.equals(other.linkInscricao))
-			return false;
-		if (subcategoria == null) {
-			if (other.subcategoria != null)
-				return false;
-		} else if (!subcategoria.equals(other.subcategoria))
-			return false;
-		if (termino == null) {
-			if (other.termino != null)
-				return false;
-		} else if (!termino.equals(other.termino))
-			return false;
-		if (titulo == null) {
-			if (other.titulo != null)
-				return false;
-		} else if (!titulo.equals(other.titulo))
-			return false;
-		if (visualizaram == null) {
-			if (other.visualizaram != null)
-				return false;
-		} else if (!visualizaram.equals(other.visualizaram))
-			return false;
 		return true;
 	}
+	
 	
 	
 }
