@@ -80,10 +80,10 @@ background:url(images/menu_divider.gif) no-repeat center;
 }
 
 a.nav:link, a.nav:visited {
-display:block; float:left; padding:0px 8px 0px 8px; margin:0 14px 0 14px;height:36px;text-decoration:none;color:#fff;}
+display:block; float:left; padding:0px 8px 0px 8px; margin:0 14px 0 14px;height:36px;text-decoration:none;color:#FFFFFF;}
 
 a.nav:hover{
-display:block; float:left; padding:0px 8px 0px 8px; margin:0 14px 0 14px;height:36px;text-decoration:none;color:#199ECD;}
+display:block; float:left; padding:0px 8px 0px 8px; margin:0 14px 0 14px;height:36px;text-decoration:bold;color:#1A0066;}
 
 /*----------------crumb_navigation-------------*/
 .crumb_navigation{
