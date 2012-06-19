@@ -25,10 +25,13 @@ public class Usuario implements GenericModel {
 	private String senha;
 	private String foto;
 	private Short escolaridade;
+	
 	@Temporal(TemporalType.DATE)
 	private Date dataNascimento;
+	
 	@ManyToOne	
 	private Cidade cidade;
+	
 	private List <Curso> cursos = new ArrayList<Curso>();
 	
 	public Long getCodigo() {
