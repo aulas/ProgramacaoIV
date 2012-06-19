@@ -8,15 +8,19 @@
 
 <ui:composition template="template.xhtml">
 	<ui:define name="content">
-	   teste23
 	   
-<<<<<<< HEAD
-Teste2
-=======
->>>>>>> b86a6fc2b78dcc8ff1b29ad716898fa8439ab404
-	  	<h:inputText id="teste" title="Teste" value="Teste" label="Estado"/>
-	  		
-
+	  	<h:form>
+	  	
+	  	    <h:panelGrid columns="3" id="panelCadastro" >
+				<h:outputText value="Código:"/>
+	            <h:inputText id="nome" value="#{estadoMB.estado.nome}"
+	                             required="true" requiredMessage="nome é obrigatório"/>
+	            <h:message for="nome"/>
+		  		<h:commandButton action="#{estadoMB.salvar}"/>
+	  	    </h:panelGrid>
+	  	
+	  	</h:form>
+	
 	   
 	</ui:define>
 </ui:composition>
