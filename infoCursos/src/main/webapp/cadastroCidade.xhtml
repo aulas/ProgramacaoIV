@@ -14,9 +14,15 @@
 	  	    <h:panelGrid columns="3" id="panelCadastro" >
 				<h:outputText value="Nome:"/>
 	            <h:inputText id="nome" value="#{cidadeMB.cidade.nome}"
-	                             required="true" requiredMessage="nome é obrigatório"/>
+	                             required="true" requiredMessage="nome é obrigatório"/><br></br><br></br>
+	            <h:outputText value="UF:"/>         
+	            <h:selectOneMenu id="estado" value="#{cidadeMB.cidade.estado}" converter="estadoConverter">
+	            	<f:selectItems value="#{cidadeMB.estados}" var="estado" 
+	            	itemValue="#{estado}" itemLabel="#{estado.nome}"/>
+	            </h:selectOneMenu>
 	            <h:message for="nome"/>
 		  		<center><h:commandButton action="#{cidadeMB.salvar}" value="Salvar"/></center>
+		  		
 	  	    </h:panelGrid>
 	  	
 	  	</h:form>

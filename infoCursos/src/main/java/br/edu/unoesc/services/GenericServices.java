@@ -19,7 +19,7 @@ public class GenericServices<T extends GenericModel> {
 
 	private Class<T> classe;
 
-	// padrão singleton
+	// padrï¿½o singleton
 	@SuppressWarnings("unchecked")
 	private Class<T> getClasse() {
 		if (this.classe == null) {
@@ -91,6 +91,42 @@ public class GenericServices<T extends GenericModel> {
 
 			dados = em.createQuery("from " + getClasse().getSimpleName())
 					.getResultList();
+
+		} finally {
+			em.close();
+			emf.close();
+		}
+		return dados;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<T> localizaNome(String nome) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("PU");
+		EntityManager em = emf.createEntityManager();
+		List<T> dados = null;
+		try {
+
+			dados = em.createQuery("from " + getClasse().getSimpleName() + " " +
+					" where nome like '%"+nome+"%'")
+					.getResultList();
+
+		} finally {
+			em.close();
+			emf.close();
+		}
+		return dados;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public T localizaCodigo(Long codigo) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("PU");
+		EntityManager em = emf.createEntityManager();
+		T dados = null;
+		try {
+
+			dados = (T) em.createQuery("from " + getClasse().getSimpleName() + " " +
+					" where codigo = "+codigo+"")
+					.getSingleResult();
 
 		} finally {
 			em.close();

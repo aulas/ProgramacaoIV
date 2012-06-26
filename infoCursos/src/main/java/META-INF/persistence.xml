@@ -7,15 +7,11 @@
 			<property name="hibernate.dialect" 
 			value="org.hibernate.dialect.MySQL5InnoDBDialect" />
 			<property name="hibernate.connection.url" 
-			value="jdbc:mysql://localhost:3306/infocursos" />
+			value="jdbc:mysql://localhost:3306/infoCursos" />
 			<property name="hibernate.connection.driver_class" 
 			value="com.mysql.jdbc.Driver" />
 			<property name="hibernate.connection.username" value="root" />
-<<<<<<< HEAD
 			<property name="hibernate.connection.password" value="123" />
-=======
-			<property name="hibernate.connection.password" value="popddv" />
->>>>>>> 4127db25767de48dea716e551e08592f7a9a7c80
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true"/>
