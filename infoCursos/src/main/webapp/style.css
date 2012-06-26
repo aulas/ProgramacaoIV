@@ -116,7 +116,7 @@ background:url(images/menu_title_bg.gif) no-repeat center;
 text-align:center;
 font-size:13px;
 font-weight:bold;
-color:#159dcc;
+color:#FFFFFF;
 line-height:30px;
 }
 /*--------left menu---------*/
@@ -163,7 +163,8 @@ font-weight:bold;
 color:#064E5A;
 }
 .product_img{
-padding:5px 0 5px 0;
+width:170px;
+height:100px;
 }
 .prod_price{
 padding:5px 0 5px 0;
@@ -488,6 +489,6 @@ text-decoration:underline;
 float:left;
 width:200px;
 text-align:center;
-color:#666666;
+color:#FFFFFF;
 padding:10px 0 0 60px;
 }
