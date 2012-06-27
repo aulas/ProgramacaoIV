@@ -9,16 +9,13 @@
 <ui:composition template="template.xhtml">
 	<ui:define name="content">
 	   
-	  	<h:form>
-	  		<center><h1>CADASTRO DE ESTADO</h1></center>
-	  	    <h:panelGrid columns="3" id="panelCadastro" >
-				<h:outputText value="Nome:"/>
-	            <h:inputText id="nome" value="#{estadoMB.estado.nome}"
-	                             required="true" requiredMessage="nome é obrigatório"/>
-	            <h:message for="nome"/>
-		  		<h:commandButton action="#{estadoMB.salvar}" value="Salvar"/>
-	  	    </h:panelGrid>
+	  	<h:form >
 	  	
+	  	<center>	  	
+	  	<h:outputText value="Informações do Curso" style="font-size:30"/>
+	  	 <br /><br /><br />
+	  	   
+	  	</center>
 	  	</h:form>
 	
 	   
