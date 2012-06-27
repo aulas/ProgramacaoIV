@@ -12,6 +12,7 @@
 			value="com.mysql.jdbc.Driver" />
 			<property name="hibernate.connection.username" value="root" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 			<property name="hibernate.connection.password" value="123456" />
 
@@ -20,6 +21,9 @@
 =======
 			<property name="hibernate.connection.password" value="agosti" />
 >>>>>>> 8ce9b8a4a9629823617cd3fab36987c84779c0a6
+=======
+			<property name="hibernate.connection.password" value="popddv" />
+>>>>>>> cbcaeb1a2e9bdde1d525e1d590d47ad3ff68d515
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true"/>
