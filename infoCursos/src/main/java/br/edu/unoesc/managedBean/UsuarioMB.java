@@ -26,9 +26,8 @@ public class UsuarioMB {
    }
 
    public void salvar() {
-      // se a lista de usuarios contiver o usuario então vou alterar
       if (usuarios.contains(usuario)) {
-	 // pego a posição do usuario dentro da lista
+	 // pego a posicao do usuario dentro da lista
 	 int posicao = usuarios.indexOf(usuario);
 	 // modifico o usuario
 	 usuarios.set(posicao, usuario);
