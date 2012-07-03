@@ -14,17 +14,17 @@
 	  		<h:outputText value="Informações do Curso" style="font-size:30"/>
 	  	 	<br /><br /><br />   	  	   
 	  		<h:panelGrid columns="2" id="panelDetalhes">
-				<h:outputText value="Hotel:" />
-	            <h:inputText id="nomeCurso" size="50" value="#{HotelMB.hotel.nome}" required="true" disabled="true" />	                             
+				<h:outputText value="Curso:" />
+	            <h:inputText id="nomeCurso" size="50" value="#{cursoMB.curso.titulo}" required="true" disabled="true" />	                             
 	            
 	            <h:outputText value="Data de Início:" />
-	            <h:inputText id="dataInCurso" size="50" value="#{CursoMB.curso.dataInicio}" required="true" disabled="true"/>
+	            <h:inputText id="dataInCurso" size="50" value="#{cursoMB.curso.dataInicio}" required="true" disabled="true"/>
 	                       
 	            <h:outputText value="Data de Término:" />
-	            <h:inputText id="dataTerCurso" size="50" value="#{CursoMB.curso.dataTermino}" required="true" disabled="true"/>
+	            <h:inputText id="dataTerCurso" size="50" value="#{cursoMB.curso.dataTermino}" required="true" disabled="true"/>
 	                             
 	            <h:outputText value="Detalhes:" />
-	            <h:inputText id="detalhesCurso" size="50" value="#{CursoMB.curso.detalhes}" required="true" disabled="true"/>
+	            <h:inputText id="detalhesCurso" size="50" value="#{cursoMB.curso.detalhes}" required="true" disabled="true"/>
 	                       	            
 	         </h:panelGrid>
 	         </center> 
