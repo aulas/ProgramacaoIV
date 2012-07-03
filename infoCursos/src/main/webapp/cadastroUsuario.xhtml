@@ -15,6 +15,13 @@
 	    <h:outputText value="Nome:"/>
 	    <h:inputText id="nome" value="#{usuarioMB.usuario.nome}" required="true" requiredMessage="nome é obrigatório"/>
 	    <h:message for="nome"/>
+	    
+	    <h:outputText value="Cidade:"/>
+	    <h:selectOneMenu id="cidade" value="#{usuarioMB.usuario.cidade}" converter="cidadeConverter">
+		     <f:selectItems value="#{cidadeMB.cidades}" var="cidade"
+		     itemValue="#{cidade}" itemLabel="#{cidade.nome}"/>
+	    </h:selectOneMenu>
+	            
 	    <h:commandButton action="#{usuarioMB.salvar}" value="Salvar"/>
 	    </h:panelGrid>
 	 </h:form>
