@@ -16,11 +16,27 @@
 	    <h:inputText id="nome" value="#{usuarioMB.usuario.nome}" required="true" requiredMessage="nome é obrigatório"/>
 	    <h:message for="nome"/>
 	    
+	    <h:outputText value="Senha:"/>
+	    <h:inputText id="senha" value="#{usuarioMB.usuario.senha}" required="true" requiredMessage="senha é obrigatória"/>
+	    <h:message for="senha"/>
+	    
+	    <h:outputText value="Email:"/>
+	    <h:inputText id="email" value="#{usuarioMB.usuario.email}" required="true" requiredMessage="email é obrigatório"/>
+	    <h:message for="email"/>
+	    
 	    <h:outputText value="Cidade:"/>
 	    <h:selectOneMenu id="cidade" value="#{usuarioMB.usuario.cidade}" converter="cidadeConverter">
 		     <f:selectItems value="#{cidadeMB.cidades}" var="cidade"
 		     itemValue="#{cidade}" itemLabel="#{cidade.nome}"/>
 	    </h:selectOneMenu>
+	    
+	    <h:outputText value="Escolaridade:"/>
+	    <h:inputText id="escolaridade" value="#{usuarioMB.usuario.escolaridade}" required="true" requiredMessage="escolaridade é obrigatória"/>
+	    <h:message for="escolaridade"/>
+	    
+	    <h:outputText value="Data Nascimento:"/>
+	    <h:inputText id="dataNascimento" value="#{usuarioMB.usuario.dataNascimento}" required="true" requiredMessage="Data de Nascimento é obrigatória"/>
+	    <h:message for="dataNascimento"/>
 	            
 	    <h:commandButton action="#{usuarioMB.salvar}" value="Salvar"/>
 	    </h:panelGrid>
